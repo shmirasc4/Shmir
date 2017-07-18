@@ -10,6 +10,8 @@ function mouseDragged(){
     //line(random(1000), random(1000), random(1000), random(1000));
     fill(random(255), random(255), random(255));
     rect(random(1000), random(1000), 50, 50);
-    noStroke();
+    fill(random(255), random(255), random(255));
+    triangle(random(1000), random(1000), random(1000), random(1000), random(1000), random(1000));
+    
 
 }
