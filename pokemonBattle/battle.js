@@ -85,6 +85,7 @@ function draw(){
     text(String(charizard.hp), 600, 425);
     text(String(pikachu.name), 50, 25);
     text(String(pikachu.hp), 50, 50);
+    
     if(p1[0].hp <=0 || comp[0].hp <=0){
     alert("Game over");
 }
@@ -96,7 +97,7 @@ function draw(){
 var check;
 
 function keyPressed(){
-    
+    if (key > 0 && key < 5){
    var cm = Math.round(Math.random() * 3);
 
    check = true;
@@ -151,7 +152,7 @@ function keyPressed(){
     text(String(pikachu.hp), 50, 50);
 
    
-
+    }
    return false;
 }
 
