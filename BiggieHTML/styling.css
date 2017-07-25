@@ -1,0 +1,20 @@
+body{
+    background-image: url("http://thesource.com/wp-content/uploads/2016/05/biggie.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+
+#name{
+    color: red;
+    text-align: center;
+    font-size:100%;       
+}
+
+#description{
+    color: lightblue; 
+    text-align: center;
+}

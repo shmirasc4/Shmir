@@ -1,0 +1,39 @@
+body{
+    margin-top:150px;
+    margin-bottom:150px;
+    background:#4b7faa;
+}
+.page1{
+    background:#4b7faa;
+}
+.text1{
+    color:white;
+    padding:10px;
+    text-align:center;
+
+}
+
+.text2{
+    color:white;
+    padding:30px;
+    text-align:center;
+    font-size:30px;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+}
+
+.button {
+    background-color: #F0F8FF;
+    color:blue;
+    font-size:22px;
+    height:60px;
+    padding:10px
+}
+
+.button-wrapper{
+    margin: 0 auto;
+}
