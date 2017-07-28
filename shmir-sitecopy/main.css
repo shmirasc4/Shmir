@@ -18,6 +18,8 @@ body{
     padding:30px;
     text-align:center;
     font-size:30px;
+    margin-left:100px;
+    margin-right:100px;
 }
 
 img{
@@ -32,8 +34,4 @@ img{
     font-size:22px;
     height:60px;
     padding:10px
-}
-
-.button-wrapper{
-    margin: 0 auto;
 }
