@@ -1,0 +1,24 @@
+body{
+    background-image: url("http://i0.wp.com/coolwallpaper.website/wp-content/uploads/2017/06/Awesome-Air-Jordan-Logo-Wallpaper-wallpaper-hd-for-desktop-1024x768-free-download-Wallpaper-4K-wallpaper-hd-1080p-free-download-for-mobile-Air-Jordan-Logo-Wallpaper-for-4K-Phone-Wallpapers.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-header{
+    color: white;
+}
+
+.jordan{
+    text-align: center;
+    color: orangered;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.page-header{
+    font-family: cursive; 
+    color: #FFEBCD;
+}
+
+img{
+    border-color: purple
+}

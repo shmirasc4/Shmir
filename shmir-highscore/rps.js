@@ -1,35 +1,66 @@
 function rps(x){
-    var playChoice = x;
-    console.log(playChoice);
-    var comp = ['r', 's', 'p']
-    var compChoice = comp[Math.round(Math.random()*2)] ;
-    if (playChoice == "r" && compChoice == "s"){
-        console.log("you won rock beats scissors");
-        $(".game").append("<p>"+ "you won rock beats scissors" + "</p>")
+    var playerChoice = x;
+    console.log(playerChoice);
+    var comp = ['r', 's', 'p'];
+    var compChoice = comp[Math.round(Math.random()*2)];
+    
+    if (playerChoice == compChoice) {
+        $(".output").empty();
+        $(".output").append("<h3>It's a tie!</h3>");
+    }
+    else if (playerChoice == 'r') {
+        if (compChoice == 'p') {
+            $(".output").empty();
+            $(".output").append("<h3>You lost! Paper covers rock.</h3>");
+        }
+        else if (compChoice == 's') {
+            $(".output").empty();
+            $(".output").append("<h3>You won! Rock smashes scissors.</h3>");
+        }
+    }
+    else if (playerChoice == 'p') {
+        if (compChoice == 'r') {
+            $(".output").empty();
+            $(".output").append("<h3>You won! Paper covers rock.</h3>");
+        }
+        else if (compChoice == 's') {
+            $(".output").empty();
+            $(".output").append("<h3>You lost! Scissors cut paper.</h3>");
+        }
+    }
+    else if (playerChoice == 's') {
+        if (compChoice == 'p') {
+            $(".output").empty();
+            $(".output").append("<h3>You won! Scissors cut paper.</h3>");
+        }
+        else if (compChoice == 'r') {
+            $(".output").empty();
+            $(".output").append("<h3>You lost! Rock smashes scissors.</h3>");
+        }
     }
 
-   if (playChoice == "r" && compChoice == "p"){
-        console.log("you lost paper smacks rock");
-        
-   }
+}
 
-   if (playChoice == compChoice){
-        console.log("tie");
-    }
 
-   if (playChoice == "s" && compChoice == "p"){
-        console.log("you lost scissors chops paper");
-    }
+function onSignIn(googleUser) {
+    console.log('User signed in!');
+    var profile = googleUser.getBasicProfile();
+    //change userName text, img source, & email text based on profile
+    $(".userName").text(profile.getName());
+    $("img").attr("src", profile.getImageUrl());
+    $(".email").text(profile.getEmail());
+    $("body").append("<p>test code</p>")
+}
 
-   if (playChoice == "s" && compChoice == "r"){
-        console.log("you lost rock cracks scissors");
-    }
-
-   if (playChoice == "p" && compChoice == "s"){
-        console.log("you lost scissors shredes paper");
-    }
-
-   if (playChoice == "p" && compChoice == "r"){
-        console.log("you win paper somehow beats rock");
-    }
+//called when "sign out" button clicked
+function onSignOut() {
+    //should sign user out and toggleHidden
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        console.log('User signed out.')
+        //setting back to default
+        $(".userName").text("USER_NAME");
+        $("img").attr("src", "assets/placeholder.png");
+        $(".email").text("example@example.com");
+    });
 }

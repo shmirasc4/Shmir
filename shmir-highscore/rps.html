@@ -3,21 +3,20 @@
         <title> Rock-Papers-Scissors Game </title>
         <script src = "rps.js"> </script>
         <link href = "rps.css" rel = "stylesheet">
+        <script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
     </head>
     <body>
         <h1> Rock-Papers-Scissors Game </h1>
         <div class = "buttons">
-                <div class="GObutton">
-                        <input type="reset" onclick="rps('r')" value="Rock">
-                    </div>
-
-                   <div class="GObutton">
-                        <input type="reset" onclick="rps('p')" value="Paper">
-                    </div>
-
-                   <div class="GObutton">
-                        <input type="reset" onclick="rps('s')" value="Scissors">
-                </div>
+                        <input type="button" class="GObutton1" onclick="rps('r')" value="Rock">
+                        <input type="button" class="GObutton2" onclick="rps('p')" value="Paper">
+                        <input type="button" class="GObutton3" onclick="rps('s')" value="Scissors">
             </div>
+        <div class = "output" style="color: blue; font-size:20px; text-align:center;">
+        </div>
     </body>
 </html>
