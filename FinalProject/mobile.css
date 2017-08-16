@@ -7,3 +7,23 @@
     background-size: cover;
     background-position: center;
 }
+#about{
+    background-image: url("http://www.eastcoasthotdogcarts.com/wp-content/plugins/images-thumbnail-sliderv1/imagestoscroll/pizza%20cart%20rendering.png");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 230px;
+    margin-top: 100px;
+    
+}
+
+#download{
+    background-image: url("https://s2.mzstatic.com/us/r30/Purple6/v4/ae/e8/d4/aee8d41e-7ce5-4eb2-8fba-69dcb813819d/mzl.qzhzibch.png");
+    background-size:cover;
+    background-position: center;
+    margin-bottom:63px;
+    height:100%;
+}
+
+#contact{
+    margin-bottom: 161px;
+}

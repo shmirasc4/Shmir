@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head
+        <script src="vendor/jquery/jquery.min.js"></script>    
+        <!--Reference platform.js library here-->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        
+         <!--Reference Client ID in meta tag here-->
+         <meta name="google-signin-client_id" content="454664379652-4vr0ae41k6hpeq43m0hqla8q1haj15h4.apps.googleusercontent.com">
+         <script>
+            $(function(){
+                 gapi.load('auth2',function(){
+                     gapi.auth2.init();
+                     });
+            });
+        //called when "sign out" button clicked
+        function onSignOut() {
+             //should sign user out and toggleHidden
+             var auth2 = gapi.auth2.getAuthInstance();
+             auth2.signOut().then(function () {
+                  console.log('User signed out.')
+                  //setting back to default
+                  $(".userName").text("USER_NAME");
+                  $(".email").text("example@example.com");
+                  window.location.href="index.html";
+                });
+            }
+        </script>
+
+    <title> Owner or Customer </title>
+    <link href="user.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="signs">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
+        </div>
+        <div id="buttons"> 
+        <button type="button" class ="button1">Owner</button>
+        <button type="button" class ="button2">Customer</button>
+        </div>
+    </body>
+</html>

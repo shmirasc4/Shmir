@@ -9,6 +9,13 @@
     <meta name="author" content="">
 
     <title>Mobile Eats</title>
+        <script src="vendor/jquery/jquery.min.js"></script>
+
+     <!--Reference platform.js library here-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!--Reference Client ID in meta tag here-->
+    <meta name="google-signin-client_id" content="454664379652-4vr0ae41k6hpeq43m0hqla8q1haj15h4.apps.googleusercontent.com">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,13 +32,16 @@
 </head>
 
 <body id="page-top">
-
+   
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <a class="navbar-brand" href="#page-top">Mobile Eats</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu <i class="fa fa-bars"></i>
         </button>
+        <div class="signs">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </div>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -49,6 +59,9 @@
 
     <!-- Intro Header -->
     <header class="masthead">
+
+
+        
         <div class="intro-body">
             <div class="container">
                 <div class="row">
@@ -67,6 +80,7 @@
 
     <!-- About Section -->
     <section id="about" class="content-section text-center">
+    </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
@@ -139,7 +153,6 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
