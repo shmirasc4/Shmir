@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head
+    <head>
         <script src="vendor/jquery/jquery.min.js"></script>    
         <!--Reference platform.js library here-->
         <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -25,19 +25,35 @@
                   window.location.href="index.html";
                 });
             }
-        </script>
+
+    function onOwner() {
+        window.location.href = "Owner/owner.html";
+    }
+    function onCustomer(){
+        window.location.href= "customer/customer.html";
+    }
+
+
+    </script>
 
     <title> Owner or Customer </title>
     <link href="user.css" rel="stylesheet">
     </head>
     <body>
-        <div class="signs">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div id="google">
+            <div class="signs">
+                <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
+            </div>
         </div>
+    </nav>
+    <div id="content">
+        <h1> Are you a customer or owner? <h1>
+        
         <div id="buttons"> 
-        <button type="button" class ="button1">Owner</button>
-        <button type="button" class ="button2">Customer</button>
+            <input type="button" class="GObutton1" onclick="onOwner();" value="Owner">
+            <input type="button" class="GObutton2" onclick="onCustomer();" value="Customer">
         </div>
+    </div>
     </body>
 </html>
